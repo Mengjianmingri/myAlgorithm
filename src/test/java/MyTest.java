@@ -1,5 +1,3 @@
-package rxz;
-
 import org.junit.Test;
 import rxz.冒泡排序.Mppx;
 import rxz.选择排序.Xzpx;
