@@ -6,12 +6,13 @@ import rxz.插入排序.Crpx;
 import rxz.选择排序.Xzpx;
 
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Date;
 
 public class MyTest {
 
     int[] array = {7, 6, 8, 2, 5, 9, 4, 1, 3};
-    int[] bigArray = new int[80000];
+    int[] bigArray = new int[80000000];
 
     public void justTime(String s) {
         Date date = new Date();
@@ -22,8 +23,8 @@ public class MyTest {
 
     @Before
     public void pre() {
-        for (int i = 0; i < 80000; i++) {
-            bigArray[i] = (int) (Math.random() * 8000000);
+        for (int i = 0; i < 80000000; i++) {
+            bigArray[i] = (int) (Math.random() * 80000000);
         }
     }
 
