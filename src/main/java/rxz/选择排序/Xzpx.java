@@ -16,7 +16,7 @@ public class Xzpx {
                     minPos = j;
                 }
             }
-            System.out.println("minPos: " + minPos);
+//            System.out.println("minPos: " + minPos);
             int temp = array[i];
             array[i] = array[minPos];
             array[minPos] = temp;
