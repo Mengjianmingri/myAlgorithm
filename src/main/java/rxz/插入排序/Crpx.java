@@ -6,10 +6,11 @@ import java.util.ArrayList;
  * TODO:插入排序算法实现
  * 时间复杂度:O(n^2)
  * 空间复杂度:O(1)
+ * 选泡插三种简单排序中最常用的一种(优化后的)
  */
 public class Crpx {
     /**
-     * 优化前的插入排序,和冒泡排序很像
+     * 优化前的插入排序,和冒泡排序很像,优化后的插入排序见solve()
      *
      * @param array 待排序数组
      * @return 排序后的数组
