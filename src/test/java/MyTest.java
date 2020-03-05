@@ -1,5 +1,6 @@
 import org.junit.Test;
 import rxz.冒泡排序.Mppx;
+import rxz.插入排序.Crpx;
 import rxz.选择排序.Xzpx;
 
 public class MyTest {
@@ -17,6 +18,14 @@ public class MyTest {
     @Test//冒泡排序
     public void test02() {
         int[] solve = Mppx.solve(array);
+        for (int x : solve) {
+            System.out.print(" " + x);
+        }
+    }
+
+    @Test//插入排序
+    public void test03() {
+        int[] solve = Crpx.solve(array);
         for (int x : solve) {
             System.out.print(" " + x);
         }
