@@ -7,7 +7,7 @@ package rxz.归并排序;
  * 稳定(注意判断条件中的小于还是小于等于,影响稳定性)
  */
 public class Gbpx {
-    public static void solve(int[] array, int left, int right) {
+    public static void solve(int[] array, int left, int right) {//递归实现
         if (left == right) {
             return;
         }
@@ -23,7 +23,7 @@ public class Gbpx {
         sort(array, left, mid + 1, right);
     }
 
-    public static void sort(int[] array, int left, int right, int border) {
+    public static void sort(int[] array, int left, int right, int border) {//归并实现
         if (left==right){
             return;
         }if (left>right){

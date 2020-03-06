@@ -3,6 +3,7 @@ import org.junit.Test;
 import rxz.冒泡排序.Mppx;
 import rxz.希尔排序.Xepx;
 import rxz.归并排序.Gbpx;
+import rxz.快速排序.Kspx;
 import rxz.插入排序.Crpx;
 import rxz.选择排序.Xzpx;
 
@@ -71,8 +72,22 @@ public class MyTest {
 //        System.out.println(Arrays.toString(array1));
 //        Gbpx.solve(array, 0, array.length - 1);//加入递归
 //        System.out.println(Arrays.toString(array));
+        //int[] arrayTemp = {7, 20, 8, 2, 11, 9, 4, 1, 3, 9, 0, -8, -8};
         justTime("排序前的时间是: ");
+//        Gbpx.solve(arrayTemp,0,arrayTemp.length-1);
+//        System.out.println(Arrays.toString(arrayTemp));
         Gbpx.solve(bigArray,0,bigArray.length-1);
+        justTime("排序后的时间是: ");
+    }
+    @Test//快速排序
+    public void test07(){//8000万数据,大概16秒
+        //int[] arrayTemp = {100, 20, 8, 2, 11, 9, 101, 1, 3, 9, 0, -8, -8};
+//        Kspx.sort(arrayTemp,0,arrayTemp.length-1);
+//        System.out.println(Arrays.toString(arrayTemp));
+        //Kspx.solve(arrayTemp,0,arrayTemp.length-1);
+        //System.out.println(Arrays.toString(arrayTemp));
+        justTime("排序前的时间是: ");
+        Kspx.solve(bigArray,0,bigArray.length-1);
         justTime("排序后的时间是: ");
     }
 }
