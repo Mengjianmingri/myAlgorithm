@@ -5,6 +5,7 @@ import rxz.希尔排序.Xepx;
 import rxz.归并排序.Gbpx;
 import rxz.快速排序.Kspx;
 import rxz.插入排序.Crpx;
+import rxz.计数排序.Jspx;
 import rxz.选择排序.Xzpx;
 
 import java.text.SimpleDateFormat;
@@ -13,8 +14,9 @@ import java.util.Date;
 
 public class MyTest {
 
-    int[] array = {7, 6, 8, 2, 5, 9, 4, 1, 3, 18, 0, -8, 45};
-    int[] array1 = {1, 6, 10, 2, 5, 6, 8, 9};
+    int[] array = {7, 6, 8, 2, 5, 9, 4, 1, 3, 18, 0, -8, 41, 15};
+    int[] array1 = {6, 10, 2, 5, 6, 1, 100, 5, 9, 2, 8, 9,-8};
+    int[] array2 = {6, 10, 2, 5, 6, 1, 100, 5, 9, 2, 8, 9,-8};
     int[] bigArray = new int[80000000];
 
     public void justTime(String s) {
@@ -24,7 +26,7 @@ public class MyTest {
         System.out.println(s + time);
     }
 
-    @Before
+    //@Before
     public void pre() {
         for (int i = 0; i < 80000000; i++) {
             bigArray[i] = (int) (Math.random() * 80000000);
@@ -76,18 +78,26 @@ public class MyTest {
         justTime("排序前的时间是: ");
 //        Gbpx.solve(arrayTemp,0,arrayTemp.length-1);
 //        System.out.println(Arrays.toString(arrayTemp));
-        Gbpx.solve(bigArray,0,bigArray.length-1);
+        Gbpx.solve(bigArray, 0, bigArray.length - 1);
         justTime("排序后的时间是: ");
     }
+
     @Test//快速排序
-    public void test07(){//8000万数据,大概16秒
+    public void test07() {//8000万数据,大概16秒
         //int[] arrayTemp = {100, 20, 8, 2, 11, 9, 101, 1, 3, 9, 0, -8, -8};
 //        Kspx.sort(arrayTemp,0,arrayTemp.length-1);
 //        System.out.println(Arrays.toString(arrayTemp));
         //Kspx.solve(arrayTemp,0,arrayTemp.length-1);
         //System.out.println(Arrays.toString(arrayTemp));
         justTime("排序前的时间是: ");
-        Kspx.solve(bigArray,0,bigArray.length-1);
+        Kspx.solve(bigArray, 0, bigArray.length - 1);
         justTime("排序后的时间是: ");
+    }
+    @Test
+    public void test08() {
+        int[] ints = Jspx.solve(array1, -8, 100);
+        System.out.println(Arrays.toString(ints));
+        Arrays.sort(array2);
+        System.out.println(Arrays.toString(array2));
     }
 }

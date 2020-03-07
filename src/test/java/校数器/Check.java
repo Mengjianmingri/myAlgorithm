@@ -1,8 +1,7 @@
-package 对数器;
+package 校数器;
 
 import org.junit.Before;
 import org.junit.Test;
-import rxz.冒泡排序.Mppx;
 import rxz.快速排序.Kspx;
 
 import java.util.Arrays;
