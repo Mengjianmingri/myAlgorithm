@@ -15,8 +15,8 @@ import java.util.Date;
 public class MyTest {
 
     int[] array = {7, 6, 8, 2, 5, 9, 4, 1, 3, 18, 0, -8, 41, 15};
-    int[] array1 = {6, 10, 2, 5, 6, 1, 100, 5, 9, 2, 8, 9,-8};
-    int[] array2 = {6, 10, 2, 5, 6, 1, 100, 5, 9, 2, 8, 9,-8};
+    int[] array1 = {6, 10, 2, 5, 6, 1, 2, 8, 9, 100};
+    int[] array2 = {6, 10, 2, 5, 6, 1, 2, 8, 9, 100};
     int[] bigArray = new int[80000000];
 
     public void justTime(String s) {
@@ -26,7 +26,7 @@ public class MyTest {
         System.out.println(s + time);
     }
 
-    //@Before
+    @Before
     public void pre() {
         for (int i = 0; i < 80000000; i++) {
             bigArray[i] = (int) (Math.random() * 80000000);
@@ -93,11 +93,18 @@ public class MyTest {
         Kspx.solve(bigArray, 0, bigArray.length - 1);
         justTime("排序后的时间是: ");
     }
-    @Test
-    public void test08() {
-        int[] ints = Jspx.solve(array1, -8, 100);
-        System.out.println(Arrays.toString(ints));
-        Arrays.sort(array2);
-        System.out.println(Arrays.toString(array2));
+
+    @Test//计数排序
+    public void test08() {////8000万数据,大概18秒
+//        int[] ints = Jspx.solve(array1, -1, 100);
+//        System.out.println(Arrays.toString(ints));
+//        Arrays.sort(array2);
+//        System.out.println(Arrays.toString(array2));
+//        Arrays.sort(bigArray);
+//        System.out.println(bigArray[bigArray.length - 1]);
+//        System.out.println(bigArray[0]);
+        justTime("排序前的时间是: ");
+        int[] solve = Jspx.solve(bigArray, 0, 79999999);
+        justTime("排序后的时间是: ");
     }
 }

@@ -20,6 +20,9 @@ public class Xzpx {
             int temp = array[i];
             array[i] = array[minPos];
             array[minPos] = temp;
+//            array[i] = array[i] ^ array[minPos];//试了下使用异或运算实现互换,发现有坑,相同地址时会把两个数都变成0,已放弃
+//            array[minPos] = array[i] ^ array[minPos];
+//            array[i] = array[i] ^ array[minPos];
         }
         return array;
     }

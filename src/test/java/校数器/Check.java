@@ -3,6 +3,8 @@ package 校数器;
 import org.junit.Before;
 import org.junit.Test;
 import rxz.快速排序.Kspx;
+import rxz.计数排序.Jspx;
+import rxz.选择排序.Xzpx;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -27,11 +29,11 @@ public class Check {
     public void check() {
         boolean flag = true;
         Arrays.sort(array);
-        Kspx.solve(array1, 0, array1.length - 1);
-        //Mppx.solve(array1);
+        //Kspx.solve(array1, 0, array1.length - 1);
+        int[] lastArr = Jspx.solve(array1,0,10000);
 
         for (int i = 0; i < array1.length; i++) {
-            if (array1[i] != array[i]) {
+            if (lastArr[i] != array[i]) {
                 flag = false;
                 break;
             }
