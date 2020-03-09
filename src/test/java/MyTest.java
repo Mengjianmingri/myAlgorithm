@@ -1,6 +1,7 @@
 import org.junit.Before;
 import org.junit.Test;
 import rxz.冒泡排序.Mppx;
+import rxz.基数排序.Jp;
 import rxz.希尔排序.Xepx;
 import rxz.归并排序.Gbpx;
 import rxz.快速排序.Kspx;
@@ -26,7 +27,7 @@ public class MyTest {
         System.out.println(s + time);
     }
 
-    @Before
+//    @Before
     public void pre() {
         for (int i = 0; i < 80000000; i++) {
             bigArray[i] = (int) (Math.random() * 80000000);
@@ -106,5 +107,10 @@ public class MyTest {
         justTime("排序前的时间是: ");
         int[] solve = Jspx.solve(bigArray, 0, 79999999);
         justTime("排序后的时间是: ");
+    }
+    @Test//基数排序
+    public void test09() {
+        Jp.solve(array1);
+        System.out.println(Arrays.toString(array1));
     }
 }
