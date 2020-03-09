@@ -13,10 +13,10 @@ public class BinarySearch {
      * @return 查找成功时返回对应的索引, 未查找到则返回-1
      */
     public static int binarySearch(int[] array, int target, int left, int right) {//数组需有序
-        int mid = left + (right - left) / 2;
-        if (left > right) {
+        if (left > right|| array[0] > target || array[array.length - 1] < target) {
             return -1;
         }
+        int mid = left + (right - left) / 2;
         if (array[mid] > target) {
             return binarySearch(array, target, left, mid - 1);
         } else if (array[mid] < target) {
@@ -35,10 +35,11 @@ public class BinarySearch {
      * @return 所有符合目标值的索引的集合, 若没查找到返回null;
      */
     public static List<Integer> binarySearch1(int[] array, int target, int left, int right) {
-        int mid = left + (right - left) / 2;
-        if (left > right) {
+//        System.out.println("~~");
+        if (left > right|| array[0] > target || array[array.length - 1] < target) {
             return null;
         }
+        int mid = left + (right - left) / 2;
         if (array[mid] > target) {
             return binarySearch1(array, target, left, mid - 1);
         } else if (array[mid] < target) {
